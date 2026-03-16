@@ -21,7 +21,6 @@ Este projeto está sendo desenvolvido pela **CodEX Academy**, um braço da CodEX
 - `Barlow Condensed`
 
 #### Paleta de Cores
-![Paleta de Cores](https://github.com/user-attachments/assets/e890b2ba-bb4c-45a6-9791-74f8dfd33928)
 
 `#08132F`
 `#90B6E3`
