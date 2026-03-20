@@ -37,8 +37,15 @@ Este projeto está sendo desenvolvido pela **CodEX Academy**, um braço da CodEX
 Para manter a organização, seguimos este padrão:
 
 ```text
- assets/
-    ├──  css/     # Folhas de estilo (Sugerido: variables.css e style.css)
-    ├──  img/     # Logos, banners e fotos dos atletas
-    └──  fonts/   # Fontes customizadas (se houver)
- index.html       # Arquivo principal
+ /
+├── index.html
+├── assets/
+│   ├── css/
+│   │   ├── variables.css      # Onde você colocará cores e fontes
+│   │   └── style.css          # Estilos gerais e layout
+│   ├── img/
+│   │   ├── logo-octabit.png
+│   │   ├── polvo-bg.mp4       # O vídeo da Equipe 1
+│   │   └── icons/             # Ícones de redes sociais e Cheers
+│   └── js/
+       └── main.js            # Para o menu mobile e animações
