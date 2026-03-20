@@ -1,0 +1,25 @@
+h1, h2, h3, .title {
+    font-family: var(--font-impact);
+    color: var(--color-gold-light);
+    letter-spacing: 2px;
+}
+
+p, span, a, label {
+    font-family: var(--font-body);
+    color: var(--color-light-blue);
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-gold-light);
+    color: var(--color-dark-blue);
+    font-family: var(--font-impact);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-sky-blue);
+}
