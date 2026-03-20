@@ -37,15 +37,18 @@ Este projeto está sendo desenvolvido pela **CodEX Academy**, um braço da CodEX
 Para manter a organização, seguimos este padrão:
 
 ```text
- /
-├── index.html
+CODEX-OCTABIT-LP/
 ├── assets/
 │   ├── css/
-│   │   ├── variables.css      # Onde você colocará cores e fontes
-│   │   └── style.css          # Estilos gerais e layout
+│   │   ├── style.css         # Estilos globais e layout
+│   │   └── variables.css     # Paleta de cores e tipografia
 │   ├── img/
-│   │   ├── logo-octabit.png
-│   │   ├── polvo-bg.mp4       # O vídeo da Equipe 1
-│   │   └── icons/             # Ícones de redes sociais e Cheers
+│   │   └── icons/            # Ícones e assets de imagem
 │   └── js/
-       └── main.js            # Para o menu mobile e animações
+│       └── main.js           # Scripts de interatividade
+├── .gitignore                # Arquivos ignorados pelo Git
+├── CONTRIBUTING.md           # Guia de contribuição da CodEX
+├── index.html                # Página principal (Entry point)
+├── LICENSE                   # Licença do projeto
+└── README.md                 # Documentação principal
+```
