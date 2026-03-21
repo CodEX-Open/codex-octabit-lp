@@ -27,22 +27,6 @@ p, span, a, label {
     font-size: 1.1rem;
 }
 
-
-
-.btn-primary {
-    background-color: var(--color-gold-light);
-    color: var(--color-dark-blue);
-    font-family: var(--font-impact);
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
-
-.btn-primary:hover {
-    background-color: var(--color-sky-blue);
-}
-
 /* =============HEADER=============*/
 
 .header {
@@ -122,7 +106,6 @@ p, span, a, label {
     transition: var(--transition-fast);
 }
 
-
 .header__hamburger.active span:nth-child(1){
     transform:translateY(7px) rotate(45deg);
 }
@@ -134,6 +117,71 @@ p, span, a, label {
 .header__hamburger.active span:nth-child(3){
     transform: translateY(-7px) rotate(-45deg);
 }
+
+/* FIM DO HAMBURGER */
+
+/* =============FIM DO HEADER=============*/
+
+/* =================HERO================*/
+
+/* VIDEO FUNDO */
+.hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.hero__subtitle{
+    font-size: 2em;
+    color: var(--color-gold-light);
+}
+
+.hero__title{
+    font-size: 3em;
+    color: var(--color-white);
+}
+
+
+
+.btn-primary {
+    background-color: var(--color-gold-light);
+    color: var(--color-dark-blue);
+    font-family: var(--font-impact);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-sky-blue);
+}
+
+
+
 
 
 /* desktop */
