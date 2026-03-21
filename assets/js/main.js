@@ -37,3 +37,5 @@ function trocarVideo() {
 
 trocarVideo();  /* roda ao carregar */
 window.addEventListener('resize', trocarVideo);  /* roda ao redimensionar */
+
+// desse jeito, depdendo da resolução do usuario, o video muda, independente do browser
