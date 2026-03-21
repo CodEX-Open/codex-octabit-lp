@@ -51,7 +51,6 @@ p, span, a, label {
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: var(--color-dark-blue));
     backdrop-filter: blur(8px);
 }
 
@@ -59,21 +58,20 @@ p, span, a, label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    padding: 10px;
 }
 
 .header__logo {
     height: 50px;
-    margin: 10px;
 }
 
 .header__nav {
     position: fixed;
     top: 0;
-    right: -100%;  /* escondido fora da tela */
+    right: -100%;  /* barra do menu do hamburguer escondido fora da tela */
     width: 50%;
     height: 100vh;
-    background-color: rgba(8, 19, 47, 0.98);
+    background-color: var(--color-dark-blue);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -113,8 +111,7 @@ p, span, a, label {
     cursor: pointer;
     position: relative;
     z-index: 101;
-    margin: 10px;
-    padding: 10px 0px 20px 20px; /* padding maior pra evitar erro de toque do nosso querido usuario */
+    padding: 10px; /* padding maior pra evitar erro de toque do nosso querido usuario */
 }
 
 .header__hamburger span {
@@ -125,22 +122,26 @@ p, span, a, label {
     transition: var(--transition-fast);
 }
 
-.header__hamburger.active span:nth-child(2){
-    opacity: 0;
-}
 
 .header__hamburger.active span:nth-child(1){
     transform:translateY(7px) rotate(45deg);
+}
+
+.header__hamburger.active span:nth-child(2){
+    opacity: 0;
 }
 
 .header__hamburger.active span:nth-child(3){
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* hamburger */
 
 /* desktop */
 @media (min-width: 768px) {
+    .header {
+        background-color: var(--color-dark-blue);
+    }
+    
     .header__nav {
         position: static;  /* ← remove o fixed */
         width: auto;
