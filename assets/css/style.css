@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: var(--color-royal-blue);
+    background-color: var(--color-dark-blue);
     color: var(--color-white);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -93,7 +93,6 @@ p, span, a, label {
     text-decoration: none;
     color: var(--color-light-blue);
     font-family: var(--font-impact);
-    font-size: 1.2rem;
     letter-spacing: 2px;
     transition: var(--transition-fast);
     font-size: 2rem;
