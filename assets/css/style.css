@@ -35,7 +35,7 @@ p, span, a, label {
     left: 0;
     width: 100%;
     z-index: 100;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
 }
 
 .header__container {
@@ -74,8 +74,6 @@ p, span, a, label {
     width: 50%;
     height: 100vh;
     background-color: var(--color-dark-blue-90);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,6 +151,8 @@ p, span, a, label {
     opacity: 0.2;
     z-index: 0;
 }
+
+/* VIDEO FUNDO FIM */
 
 .hero {
     position: relative;
