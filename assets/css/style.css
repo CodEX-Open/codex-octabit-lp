@@ -240,8 +240,8 @@ p, span, a, label {
         padding: 10px 20px;
         background-color: var();
         margin-right: 5px;
+        z-index: 101;
     }
-
 
     .header__hamburger{
         display: none; /* esconde o hamburguer no desktop */
@@ -271,3 +271,4 @@ p, span, a, label {
         font-size: 1.2em;
     }
 }
+
