@@ -179,6 +179,11 @@ p, span, a, label {
     z-index: 1;
 }
 
+.hero__logo{
+    max-height: 145px;
+    margin-bottom: 5px;
+}
+
 .hero__subtitle{
     font-size: 2em;
     color: var(--color-gold-light);
