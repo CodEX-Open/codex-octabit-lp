@@ -46,7 +46,8 @@ p, span, a, label {
 }
 
 .header__logo {
-    height: 50px;
+    height: 70px;
+    margin-left: 10px;
 }
 
 .header__overlay {
@@ -229,7 +230,12 @@ p, span, a, label {
     }
         .header__container {
         position: relative;
-        justify-content: flex-start; 
+        justify-content: flex-start;
+        height: 85px;
+    }
+
+    .hero__video{
+        opacity: 0.15;
     }
 
     .hero__subtitle{
