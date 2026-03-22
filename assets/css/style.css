@@ -180,7 +180,7 @@ p, span, a, label {
 }
 
 .hero__logo{
-    max-height: 145px;
+    max-height: 120px;
     margin-bottom: 5px;
 }
 
@@ -261,6 +261,11 @@ p, span, a, label {
     .hero__video{
         opacity: 0.15;
     }
+
+    .hero__logo{
+        max-height: 145px;
+        margin-bottom: 5px;
+}
 
     .hero__subtitle{
         font-size: 2em;
