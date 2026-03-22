@@ -102,6 +102,11 @@ p, span, a, label {
     color: var(--color-gold-light);
 }
 
+.header__btn-associe {
+    display: none;
+}
+
+
 /* HAMBURGER */
 
 .header__hamburger {
@@ -226,10 +231,23 @@ p, span, a, label {
         flex-direction: row;
         gap: 2rem;
     }
+
+    .header__btn-associe {
+        display: block;
+        margin-left: auto; 
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 20px;
+        background-color: var();
+        margin-right: 5px;
+    }
+
+
     .header__hamburger{
         display: none; /* esconde o hamburguer no desktop */
     }
-        .header__container {
+
+    .header__container {
         position: relative;
         justify-content: flex-start;
         height: 85px;
@@ -240,8 +258,8 @@ p, span, a, label {
     }
 
     .hero__subtitle{
-    font-size: 2em;
-    color: var(--color-gold-light);
+        font-size: 2em;
+        color: var(--color-gold-light);
     }
 
     .hero__title{
@@ -250,6 +268,6 @@ p, span, a, label {
     }
 
     .btn-primary {
-    font-size: 1.2em;
+        font-size: 1.2em;
     }
 }
