@@ -202,25 +202,47 @@ p, span, a, label {
 
 
 
-/* desktop */
+/* DESKTOP */
 @media (min-width: 768px) {
+
+/* =============HEADER=============*/
+
     .header {
-        background-color: var(--color-dark-blue);
+        background-color: var(--color-royal-blue-90);
+        backdrop-filter: blur(4px);
     }
-    
+
     .header__nav {
-        position: static;  /* ← remove o fixed */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  
         width: auto;
         height: auto;
         background-color: transparent;
-        backdrop-filter: none;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         gap: 2rem;
     }
     .header__hamburger{
         display: none; /* esconde o hamburguer no desktop */
     }
-    
+        .header__container {
+        position: relative;
+        justify-content: flex-start; 
+    }
+
+    .hero__subtitle{
+    font-size: 2em;
+    color: var(--color-gold-light);
+    }
+
+    .hero__title{
+        font-size: 4em;
+        color: var(--color-white);
+    }
+
+    .btn-primary {
+    font-size: 1.2em;
+    }
 }
