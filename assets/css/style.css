@@ -43,11 +43,12 @@ p, span, a, label {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    background-color: var(--color-royal-blue-70);
 }
 
 .header__logo {
     height: 70px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .header__overlay {
@@ -209,8 +210,8 @@ p, span, a, label {
 /* =============HEADER=============*/
 
     .header {
-        background-color: var(--color-royal-blue-90);
-        backdrop-filter: blur(4px);
+        background-color: var(--color-royal-blue-70);
+        backdrop-filter: blur(3px);
     }
 
     .header__nav {
