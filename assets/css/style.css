@@ -204,6 +204,7 @@ p, span, a, label {
     border: none;
     cursor: pointer;
     transition: var(--transition-fast);
+    text-decoration: none;
 }
 
 .btn-primary:hover {
