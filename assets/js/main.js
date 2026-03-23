@@ -47,7 +47,7 @@ window.addEventListener('scroll', () => {
 
     const heroHeight = heroSection.offsetHeight;
 
-    if (window.scrollY > heroHeight) {
+    if (window.scrollY > 225) {
         header.classList.add('header--hidden');
     } else {
         header.classList.remove('header--hidden');
