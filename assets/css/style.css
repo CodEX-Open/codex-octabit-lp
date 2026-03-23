@@ -230,6 +230,7 @@ p, span, a, label {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .about__text{
@@ -260,8 +261,10 @@ p, span, a, label {
     margin-bottom: 1em;
 }
 
-.about__image{
+.about__video{
     height: 300px;
+    margin: 0px 0px 30px 0px;
+    min-height: 500px;
 }
 
 
@@ -360,18 +363,25 @@ p, span, a, label {
 
 .about__text{
     grid-column: 1;
+    align-items: center;
 }
 
 .about__title{
     font-size: 4.5em;
+    align-self: flex-start;
+    text-align: left;
 }
 
 .about__subtitle{
     font-size: 2.5em;
+    align-self: flex-start;
+    text-align: left;
 }
 
 .about__description{
     font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about__media{
@@ -379,12 +389,12 @@ p, span, a, label {
     justify-content: center;
 }
 
-.about__image{
+.about__video{
     max-width: 100%;
     height: auto;
     display: block;
     align-self: right;
-    padding: 10px 0px;
+    margin: 30px 0px;
 }
 
 }
