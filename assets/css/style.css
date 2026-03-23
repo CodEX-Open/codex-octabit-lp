@@ -1,3 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
 h1, h2, h3, .title {
     font-family: var(--font-impact);
     color: var(--color-gold-light);
@@ -22,4 +40,14 @@ p, span, a, label {
 
 .btn-primary:hover {
     background-color: var(--color-sky-blue);
+}
+
+/* ==== PROJETOS === */
+
+.projects{
+}
+
+
+/* ==== FOOTER === */
+.footer {
 }
