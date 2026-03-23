@@ -246,12 +246,16 @@ p, span, a, label {
 .about__highlight{
     font-size: 1em;
     margin: 0px 5px;
+    -webkit-text-stroke: 3px var(--color-mid-blue);
+    color: transparent;
 }
 
 .about__subtitle{
-    font: var(--font-body);
+    font-family: var(--font-body);
     font-size: 1.5em;
     margin-bottom: 5px;
+    color: var(--color-gold-light);
+    font-weight: lighter;
 }
 
 .about__description{
@@ -277,7 +281,7 @@ p, span, a, label {
         position: fixed;
         background-color: var(--color-royal-blue-70);
         transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
-        will-change: transform-opacity;
+        will-change: transform, opacity;
     }
 
     .header--hidden{
@@ -305,7 +309,6 @@ p, span, a, label {
         text-decoration: none;
         font-size: 1rem;
         padding: 10px 20px;
-        background-color: var();
         margin-right: 5px;
         z-index: 101;
     }
@@ -395,7 +398,7 @@ p, span, a, label {
     max-height: 750px;
     height: auto;
     display: block;
-    align-self: right;
+    align-self: flex-end;
     margin: 30px 0px;
 }
 
