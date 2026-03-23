@@ -155,14 +155,15 @@ p, span, a, label {
 
 /* VIDEO FUNDO */
 .hero__video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.2;
-    z-index: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* VIDEO FUNDO FIM */
@@ -220,7 +221,8 @@ p, span, a, label {
 /* =============SECTION SOBRE=============*/
 
 .about{
-    background-color: var(--color-royal-blue);
+    background-color: var(--color-royal-blue-80);
+    backdrop-filter: blur(4px);
 }
 
 .about__container{
@@ -268,8 +270,16 @@ p, span, a, label {
 /* =============HEADER=============*/
 
     .header {
+        position: fixed;
         background-color: var(--color-royal-blue-70);
-        backdrop-filter: blur(3px);
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
+        will-change: transform-opacity;
+    }
+
+    .header--hidden{
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
     }
 
     .header__nav {
@@ -342,7 +352,7 @@ p, span, a, label {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
-    padding: 10px 40px;
+    padding: 15px 40px;
     align-items: start;
 }
 
@@ -374,4 +384,6 @@ p, span, a, label {
     display: block;
     align-self: right;
     padding: 10px 0px;
+}
+
 }

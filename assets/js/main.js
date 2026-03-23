@@ -38,4 +38,18 @@ function trocarVideo() {
 trocarVideo();  /* roda ao carregar */
 window.addEventListener('resize', trocarVideo);  /* roda ao redimensionar */
 
-// desse jeito, depdendo da resolução do usuario, o video muda, independente do browser
+// desse jeito, dependendo da resolução do usuario, o video muda, independente do browser
+
+const header = document.querySelector('.header');
+const heroSection = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+
+    const heroHeight = heroSection.offsetHeight;
+
+    if (window.scrollY > heroHeight) {
+        header.classList.add('header--hidden');
+    } else {
+        header.classList.remove('header--hidden');
+    }
+});
