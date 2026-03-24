@@ -45,8 +45,88 @@ p, span, a, label {
 /* ==== PROJETOS === */
 
 .projects{
+    padding: 80px 60px 50px;
+    background-color: var(--color-dark-blue);
+    position: relative; 
+    overflow: hidden; 
 }
 
+.projects_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.projects_header h3 {
+    font-family: var(--font-body);
+    color: var(--color-gold-light);
+    font-weight: 600; font-size: 1rem;
+    letter-spacing: 5px; text-transform: uppercase;
+}
+
+.projects_header h2 {
+    font-family: var(--font-impact);
+    font-size: clamp(2rem, 3vw, 3rem); 
+    line-height: 1.2;
+    color: var(--color-white);
+}
+
+.projects_header h2 span {
+    color: var(--color-mid-blue);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+.projects_tab {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.projects_tab-button {
+    font-family: var(--font-body);
+    font-weight: 700; font-size: 0.75rem;
+    letter-spacing: 2.5px; text-transform: uppercase;
+
+    background: color-mix(in srgb, var(--color-royal-blue) 25%, transparent);
+    color: color-mix(in srgb, var(--color-light-blue) 40%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-mid-blue) 20%, transparent);
+    padding: 12px 24px;
+    
+    cursor: pointer;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: var(--transition-fast); 
+    position: relative; overflow: hidden;
+}
+.projects_tab-button::before{
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0; 
+    height: 1px;
+    background: var(--color-gold-light);
+    transform: scaleX(0);
+    transition: var(--transition-fast);
+}
+
+.projects_tab-button:hover {
+    background: color-mix(in srgb, var(--color-royal-blue) 50%, transparent);
+    color: var(--color-light-blue);
+}
+
+.projects_tab-button.active {
+    background: color-mix(in srgb, var(--color-royal-blue) 70%, transparent);
+    color: var(--color-gold-light);
+    border-color: color-mix(in srgb, var(--color-gold-light) 30%, transparent);
+}
+
+.projects_tab-button.active::before {
+    transform: scaleX(1);
+}
 
 /* ==== FOOTER === */
 .footer {
