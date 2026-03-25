@@ -397,6 +397,15 @@ p, span, a, label {
 
     .footer__links li {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__links li > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .footer__bottom {
