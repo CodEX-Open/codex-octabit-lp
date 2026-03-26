@@ -28,14 +28,14 @@
             </div>
 
             <div class="projects_tab">
-                <div class="projects_tab-button active">Tab 1</div>
-                <div class="projects_tab-button">Tab 2</div>
-                <div class="projects_tab-button">Tab 3</div>
+                <div class="projects_tab-button active" data-index="0">Tab 1</div>
+                <div class="projects_tab-button" data-index="1">Tab 2</div>
+                <div class="projects_tab-button" data-index="2">Tab 3</div>
             </div>
 
             <div class="projects_content">
 
-                <div class="projects_card active">
+                <div class="projects_card active" data-index="0">
                     <div class="projects_info">
                         <h3>Projeto 1</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo.</p>
@@ -49,6 +49,20 @@
                         
                     </div>
                 </div>
+
+                <div class="projects_card" data-index="1">
+                    <div class="projects_info">
+                        <h3>Projeto 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo.</p>
+                    </div>
+
+                    <div class="projects_media" onclick="toggleVideo(this)">
+                        <div class="projects_play"></div>
+                        <video src="" ></video>
+                    </div>
+                </div>
+
+            </div>
             </section>
 
         <section class="membership" id="socio">
