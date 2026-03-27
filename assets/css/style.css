@@ -94,7 +94,7 @@ p, span, a, label {
 .projects_tab {
     display: flex;
     gap: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     margin-left: 9px;
     position: relative;
 }
@@ -147,15 +147,15 @@ p, span, a, label {
     grid-template-columns: 1fr 1.4fr;
     gap: 3px;
     min-height: 400px;
-
     /* position: relative; z-index: 1;*/
+    
 }
 
 .projects_card {
     display: none; 
     grid-column: 1 / -1; 
     grid-template-columns: 1fr 1.4fr; 
-    gap: 5px; 
+    gap: 0px; 
 }
 .projects_card.active {
     display: grid;
@@ -164,8 +164,8 @@ p, span, a, label {
 
 /* === Conteudo Lado Esquerdo - Texto  === */
 .projects_info {
-    background: color-mix(in srgb, var(--color-royal-blue) 25%, transparent);
-    border: 1px solid color-mix(in srgb, var(--color-mid-blue) 20%, transparent);
+    background:  linear-gradient(180deg, var(--color-royal-blue) 0%, var(--color-dark-blue) 100%);
+    border: 1px solid color-mix(in srgb, var(--color-mid-blue) 40%, transparent);
     padding: 44px 44px;
     display: flex; flex-direction: column; justify-content: space-between;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
@@ -241,14 +241,15 @@ p, span, a, label {
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
     clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-    background: linear-gradient(135deg, #031e5a 0%, #06122e 100%);
+    background: linear-gradient(180deg, var(--color-royal-blue) 0%, var(--color-dark-blue) 100%);
+    border: 1px solid color-mix(in srgb, var(--color-mid-blue) 40%, transparent);
     min-height: 400px;
     cursor: pointer;
 }
 
 .projects_media-grad{
     position: absolute; inset: 0;
-    background: linear-gradient(90deg, color-mix(in srgb, var(--color-dark-blue) 55%, transparent) 0%,transparent 40%);
+    /*background: linear-gradient(90deg, color-mix(in srgb, var(--color-dark-blue) 55%, transparent) 0%,transparent 40%);*/
     pointer-events: none; z-index: 1;
 }
 
