@@ -53,7 +53,7 @@ p, span, a, label {
 }
 
 .header__logo {
-    height: 70px;
+    height: 50px;
     margin-left: 15px;
 }
 
@@ -101,7 +101,7 @@ p, span, a, label {
     font-family: var(--font-impact);
     letter-spacing: 2px;
     transition: var(--transition-fast);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .header__link:hover {
@@ -155,7 +155,7 @@ p, span, a, label {
 
 /* VIDEO FUNDO */
 .hero__video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -192,7 +192,8 @@ p, span, a, label {
 }
 
 .hero__subtitle{
-    font-size: 2em;
+    font-size: 1.5em;
+    letter-spacing: 3px;
     color: var(--color-gold-light);
 }
 
@@ -205,12 +206,24 @@ p, span, a, label {
     background-color: var(--color-gold-light);
     color: var(--color-dark-blue);
     font-family: var(--font-impact);
-    padding: 12px 24px;
+    padding: 12px 28px;
     border: none;
     cursor: pointer;
     transition: var(--transition-fast);
     text-decoration: none;
+    transform: skew(20deg);
 }
+
+.btn-primary span {
+
+    font-family: var(--font-impact);
+    display: inline-block;
+    transform: skew(-20deg);
+    color: var(--color-dark-blue);
+    
+
+}
+
 
 .btn-primary:hover {
     background-color: var(--color-sky-blue);
