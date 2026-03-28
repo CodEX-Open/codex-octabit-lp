@@ -42,6 +42,8 @@ p, span, a, label {
     width: 100%;
     z-index: 100;
     backdrop-filter: blur(4px);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
+
 }
 
 .header__container {
@@ -112,6 +114,11 @@ p, span, a, label {
     display: none;
 }
 
+.header--hidden{
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
 
 /* HAMBURGER */
 
@@ -145,6 +152,10 @@ p, span, a, label {
 
 .header__hamburger.active span:nth-child(3){
     transform: translateY(-7px) rotate(-45deg);
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 /*=== HAMBURGER FIM ==== */
@@ -220,8 +231,6 @@ p, span, a, label {
     display: inline-block;
     transform: skew(-20deg);
     color: var(--color-dark-blue);
-    
-
 }
 
 
@@ -297,12 +306,6 @@ p, span, a, label {
         will-change: transform, opacity;
     }
 
-    .header--hidden{
-        transform: translateY(-100%);
-        opacity: 0;
-        pointer-events: none;
-    }
-
     .header__nav {
         position: absolute;
         left: 50%;
@@ -314,6 +317,11 @@ p, span, a, label {
         display: flex;
         flex-direction: row;
         gap: 2rem;
+        pointer-events: none;
+    }
+
+    .header__link{
+        pointer-events: auto;
     }
 
     .header__btn-associe {
@@ -324,7 +332,20 @@ p, span, a, label {
         padding: 10px 20px;
         margin-right: 5px;
         z-index: 101;
+        background-color: var(--color-gold-light);
+        transition: var(--transition-fast);
     }
+
+    .header__btn-associe span {
+
+        color: var(--color-dark-blue);
+        font-family: var(--font-impact);
+    }
+
+    .header__btn-associe:hover {
+        background-color: var(--color-sky-blue);
+    }
+
 
     .header__hamburger{
         display: none; /* esconde o hamburguer no desktop */

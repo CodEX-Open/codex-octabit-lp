@@ -1,25 +1,46 @@
 // ==== HAMBURGER ====
-
 const hamburger = document.getElementById('hamburger');
 const nav = document.querySelector('.header__nav');
 const overlay = document.getElementById('overlay');
+const headerEl = document.querySelector('.header');
 
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
     hamburger.classList.toggle('active');
     overlay.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
 });
 
 overlay.addEventListener('click', () => {
     nav.classList.remove('active');
     hamburger.classList.remove('active');
     overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+});
+
+const logoHeader = document.querySelector('.header__logo-link');
+
+logoHeader.addEventListener('click', () => {
+    nav.classList.remove('active');
+    hamburger.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+});
+
+const links = document.querySelectorAll('.header__link');
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    });
 });
 
 // ==== HAMBURGER FIM ====
 
 // ==== VIDEO ====
-
 const video = document.querySelector('.hero__video');
 const source = video.querySelector('source');
 
@@ -31,25 +52,35 @@ function trocarVideo() {
     
     if (source.src !== novoSrc) {
         source.src = novoSrc;
-        video.load();  /* recarrega o vídeo */
+        video.load();
     }
 }
 
-trocarVideo();  /* roda ao carregar */
-window.addEventListener('resize', trocarVideo);  /* roda ao redimensionar */
+trocarVideo();
+window.addEventListener('resize', trocarVideo);
+// ==== VIDEO FIM ====
 
-// desse jeito, dependendo da resolução do usuario, o video muda, independente do browser
-
-const header = document.querySelector('.header');
-const heroSection = document.querySelector('.hero');
+// ==== HEADER SCROLL ====
+let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    const isMobile = window.innerWidth < 768;
 
-    const heroHeight = heroSection.offsetHeight;
-
-    if (window.scrollY > 225) {
-        header.classList.add('header--hidden');
+    if (isMobile) {
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            headerEl.classList.add('header--hidden');
+        } else {
+            headerEl.classList.remove('header--hidden');
+        }
     } else {
-        header.classList.remove('header--hidden');
+        if (currentScroll > 300) {
+            headerEl.classList.add('header--hidden');
+        } else {
+            headerEl.classList.remove('header--hidden');
+        }
     }
+
+    lastScroll = currentScroll;
 });
+// ==== HEADER SCROLL FIM ====
