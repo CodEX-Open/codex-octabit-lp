@@ -28,15 +28,16 @@
             </div>
 
             <div class="projects_tab">
-                <div class="projects_tab-button active" data-index="0">Trote Solidário</div>
-                <div class="projects_tab-button" data-index="1">Codex</div>
-                <div class="projects_tab-button" data-index="2">.ZIP</div>
-                <div class="projects_tab-button" data-index="3">HerTech</div>
+                <div class="projects_tab-button active" data-index="trote">Trote Solidário</div>
+                <div class="projects_tab-button" data-index="octacast">OctaCast</div>
+                <div class="projects_tab-button" data-index="codex">Codex</div>
+                <div class="projects_tab-button" data-index=".zip">.ZIP</div>
+                <div class="projects_tab-button" data-index="hertech">HerTech</div>
             </div>
 
             <div class="projects_content">
                 <!-- TROTE SOLIDÁRIO -->
-                <div class="projects_card active" data-index="0">
+                <div class="projects_card active" data-index="trote">
                     <div class="projects_info">
                         <div><div class="projects_info-tag social">◆ AÇÃO SOCIAL</div></div>
                         <h2>TROTE SOLIDÁRIO</h2>
@@ -50,15 +51,40 @@
                     </div>
 
                     <div class="projects_media" onclick="toggleVideo(this)">
+                        <div class="projects_media-blur">
+                            <video src="assets/video/trotesolidario.mp4" muted loop playsinline></video>
+                        </div>
+
                         <div class="projects_play"></div>
-                        <div class="projects_media-grad"></div>
-                        <video src="assets/video/trotesolidario.mp4" ></video>
-                        
+                            <video class="vertical" src="assets/video/trotesolidario.mp4" ></video>
+                        <div class="projects_media-counter"><span>01</span> / 05</div>
+                    </div>
+                </div>
+
+                <!-- OCTACAST -->
+                <div class="projects_card" data-index="octacast">
+                    <div class="projects_info">
+                        <div><div class="projects_info-tag equipe">◆ PODCAST</div></div>
+                        <h2>OCTACAST</h2>
+                        <p>O podcast da OCTABIT sobre marketing e tecnologia. Episódios com temas relevantes para os estudantes de computação, trazendo conteúdo prático e discussões sobre o mercado.</p>
+                            <div class="projects_desc">
+                                <p>Marketing & Tecnologia</p>
+                                <p>Conteúdo para estudantes de computação</p>
+                                <p>Episódios com temas do mercado</p>
+                            </div>
+
+                        <a href="https://github.com/CodEX-Open" target="_blank" class="projects_info-btn">Ver Projeto →</a>
+                    
+                    </div>
+
+                    <div class="projects_media">
+                        <img class="fill" src="assets/logos/octacast.jpg" alt="CODEX" style=" object-fit:fill; min-width: 90%; min-height: 90%;">
+                        <div class="projects_media-counter"><span>02</span> / 05</div>
                     </div>
                 </div>
 
                 <!-- CODEX -->
-                <div class="projects_card" data-index="1">
+                <div class="projects_card" data-index="codex">
                     <div class="projects_info">
                         <div><div class="projects_info-tag equipe">◆ EQUIPE TECH</div></div>
                         <h2>CODEX</h2>
@@ -75,32 +101,32 @@
 
                     <div class="projects_media">
                         <div class="projects_media-txt">CODEX</div>
-                        <div class="projects_media-grad"></div>
-                        <img src="assets/logos/codex.png" alt="CODEX">
+                        <img class="logo" src="assets/logos/codex.png" alt="CODEX">
+                        <div class="projects_media-counter"><span>03</span> / 05</div>
                     </div>
                 </div>
 
                 <!-- .ZIP -->
-                <div class="projects_card" data-index="2">
+                <div class="projects_card" data-index=".zip">
                     <div class="projects_info">
                         <div><div class="projects_info-tag equipe">◆ EQUIPE TECH</div></div>
                         <h2>.ZIP</h2>
                         <p>Um ambiente colaborativo onde os alunos colocam a mão na massa. A .ZIP simula a rotina de uma empresa de desenvolvimento, focando em inovação tecnológica e na construção de um portfólio sólido para a carreira.</p>
                         <div class="projects_desc">
                                 <p>Equipe de desenvolvimento de soluções</p>
-                                <p>Piore que CODEX</p>
-                                <p>Nem sabem se definir</p>
+                                <p>Projetos reais em equipe</p>
+                                <p>Foco em inovação tecnológica</p>
                             </div>
                     </div>
 
                     <div class="projects_media">
-                        <div class="projects_media-grad"></div>
-                        <img src="assets/logos/zip.png" alt=".ZIP">
+                        <img class="logo" src="assets/logos/zip.png" alt=".ZIP">
+                        <div class="projects_media-counter"><span>04</span> / 05</div>
                     </div>
                 </div>
 
                 <!-- HearTech -->
-                <div class="projects_card" data-index="3">
+                <div class="projects_card" data-index="hertech">
                     <div class="projects_info">
                         <div><div class="projects_info-tag equipe">◆ EQUIPE FEMININA</div></div>
                         <h2>HerTech</h2>
@@ -113,8 +139,8 @@
                     </div>
 
                     <div class="projects_media">
-                        <div class="projects_media-grad"></div>
-                        <img src="assets/logos/hertech.png" alt=".ZIP">
+                        <img class="logo" src="assets/logos/hertech.png" alt="HerTech">
+                        <div class="projects_media-counter"><span>05</span> / 05</div>
                     </div>
                 </div>
 
