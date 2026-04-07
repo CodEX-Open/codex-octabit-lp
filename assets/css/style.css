@@ -148,13 +148,15 @@ p, span, a, label {
 
 /* === Parte do Conteudo === */
 .projects_content {
-    position: relative; z-index: 1;  
+    position: relative; z-index: 1; 
+    min-height: 500px; 
 }
 
 .projects_card {
     display: none; 
     grid-template-columns: 1fr 1.4fr; 
     gap: 3px; 
+    height: 480px;
 }
 .projects_card.active {
     display: grid;
@@ -169,7 +171,7 @@ p, span, a, label {
     display: flex; flex-direction: column; justify-content: space-between;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
     position: relative; overflow: hidden;
-    min-height: 420px;
+    height: 100%;
     
 }
 
@@ -255,10 +257,11 @@ p, span, a, label {
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
     clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-    background: linear-gradient(180deg, var(--color-royal-blue) 0%, var(--color-dark-blue) 100%);
+    background: linear-gradient(160deg, #031e5a 0%, #06122e 100%);
+    
     border: 1px solid color-mix(in srgb, var(--color-mid-blue) 40%, transparent);
-    min-height: 420px;
     cursor: pointer;
+    height: 100%;
 }
 
 
@@ -352,7 +355,7 @@ p, span, a, label {
 
 .projects_media img.logo{
     position: relative; z-index: 2;
-    max-width: 55%; max-height: 55%;
+    max-width: 50%; max-height: 50%;
     object-fit: contain;
     filter: drop-shadow(0 0 18px rgba(233,213,157,.12));
     transition: transform 0.4s, filter 0.4s;
@@ -382,11 +385,13 @@ p, span, a, label {
 
     .projects_card.active {
         grid-template-columns: 1fr;
-        grid-template-rows: 260px auto; }
+        grid-template-rows: 260px auto;
+        height: auto;}
 
-    .projects_media { order: -1; min-height: 260px; }
+    .projects_media { order: -1; height: 260px; }
 
     .projects_info {
+        height: auto;
         clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
         padding: 28px 24px; min-height: unset; }
 
