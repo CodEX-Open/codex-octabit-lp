@@ -257,24 +257,83 @@ p, span, a, label {
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: center;
     clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
-    background: linear-gradient(160deg, #031e5a 0%, #06122e 100%);
-    
+    background: linear-gradient(160deg, var(--color-royal-blue) 0%, var(--color-dark-blue) 100%);
     border: 1px solid color-mix(in srgb, var(--color-mid-blue) 40%, transparent);
     cursor: pointer;
     height: 100%;
 }
 
+.projects_media::before {
+    content: ''; position: absolute;
+    inset: 14px; pointer-events: none; opacity: 0;
+    transition: opacity 0.3s ease; z-index: 3;
+
+    --cor: var(--color-gold-light);
+    --espessura: 1px;
+    --tamanho: 20px; 
+
+    background:
+    /* Canto Superior Esquerdo */
+    linear-gradient(var(--cor), var(--cor)) top left / var(--tamanho) var(--espessura) no-repeat,
+    linear-gradient(var(--cor), var(--cor)) top left / var(--espessura) var(--tamanho) no-repeat,
+    
+    /* Canto Superior Direito */
+    linear-gradient(var(--cor), var(--cor)) top right / var(--tamanho) var(--espessura) no-repeat,
+    linear-gradient(var(--cor), var(--cor)) top right / var(--espessura) var(--tamanho) no-repeat,
+    
+    /* Canto Inferior Esquerdo */
+    linear-gradient(var(--cor), var(--cor)) bottom left / var(--tamanho) var(--espessura) no-repeat,
+    linear-gradient(var(--cor), var(--cor)) bottom left / var(--espessura) var(--tamanho) no-repeat,
+    
+    /* Canto Inferior Direito  */
+    linear-gradient(var(--cor), var(--cor)) bottom right / var(--tamanho) var(--espessura) no-repeat,
+    linear-gradient(var(--cor), var(--cor)) bottom right / var(--espessura) var(--tamanho) no-repeat;
+}
+
+.projects_media:hover::before {
+  opacity: 0.5;
+}
+
+.projects_media-grid {
+    position: absolute; inset: 0;
+    background-image:
+    linear-gradient(color-mix(in srgb, var(--color-mid-blue) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-mid-blue) 5%, transparent) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+}
+
+.projects_media-grid::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 70% at 50% 50%,
+    transparent 30%,
+    color-mix(in srgb, var(--color-dark-blue) 85%, transparent) 85%);
+}
+
+
+.projects_media-grad {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(3,10,30,0.6) 0%, transparent 40%);
+    z-index: 1;
+}
 
 .projects_media-txt{
     position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center;
     font-family: var(--font-impact);
-    font-size:8rem; letter-spacing: 8px;
+    font-size:10rem; letter-spacing: 8px;
     color: color-mix(in srgb, var(--color-mid-blue) 6%, transparent);
     pointer-events: none;
     user-select: none;
     white-space: nowrap;
+    transition: transform 0.5s, opacity 0.6s;
         
+}
+
+.projects_media:hover .projects_media-txt {
+    transform: scale(1.65);
+    opacity: 0.04;
 }
 
 .projects_play{

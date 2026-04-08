@@ -59,6 +59,14 @@ const projectsCards = document.querySelectorAll('.projects_card');
 
 projectsTabs.forEach(tab => {
     tab.addEventListener('click', () => {
+
+        document.querySelectorAll('.projects_media video').forEach(video => {
+            if (!video.paused) {
+                video.pause(); 
+               
+            }
+        });
+
         const idx = tab.dataset.index;
 
         projectsTabs.forEach(t => t.classList.remove('active'));
