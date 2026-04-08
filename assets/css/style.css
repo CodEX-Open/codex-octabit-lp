@@ -294,6 +294,28 @@ p, span, a, label {
   opacity: 0.5;
 }
 
+
+.projects_media::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        color-mix(in srgb, var(--color-mid-blue) 25%, transparent) 0%,
+        transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+.projects_media:hover::after {
+    background: radial-gradient(circle,
+        color-mix(in srgb, var(--color-dark-blue) 15%, transparent) 0%,
+        transparent 70%);
+}
+
+
 .projects_media-grid {
     position: absolute; inset: 0;
     background-image:
@@ -418,8 +440,16 @@ p, span, a, label {
     position: relative; z-index: 2;
     max-width: 50%; max-height: 50%;
     object-fit: contain;
-    filter: drop-shadow(0 0 18px rgba(233,213,157,.12));
+    filter: 
+        drop-shadow(0 0 30px rgba(42,123,204,0.6))   /* glow azul */
+        drop-shadow(0 0 60px rgba(42,123,204,0.25)); /* halo externo */
     transition: transform 0.4s, filter 0.4s;
+}
+.projects_media:hover img.logo {
+    transform: scale(1.06);
+    filter: 
+        drop-shadow(0 0 30px rgba(32, 150, 185, 0.5))
+        drop-shadow(0 0 60px rgba(233,213,157,0.2));
 }
 
 .projects_media img.fill{
