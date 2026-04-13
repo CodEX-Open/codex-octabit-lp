@@ -48,9 +48,9 @@ function trocarVideo() {
     const isMobile = window.innerWidth <= 768;
     const novoSrc = isMobile 
         ? 'assets/videos/PolvoMobileTeste03.mp4' 
-        : 'assets/videos/PolvoDesktop02.mp4';
+        : 'assets/videos/PolvoDesktop03.mp4';
     
-    if (source.src !== novoSrc) {
+    if (!source.src.endsWith(novoSrc)) {
         source.src = novoSrc;
         video.load();
     }
