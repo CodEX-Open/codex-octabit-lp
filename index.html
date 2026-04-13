@@ -9,15 +9,79 @@
 </head>
 <body>
 
+    <div class="header__overlay" id="overlay"></div>
+
     <header class="header" id="home">
-        </header>
+    <div class="header__container">
+        <a href="#sobre" class="header__logo-link"><img class="header__logo" src="assets/imagens/logos-octabit/500px/10OCTABIT500px.png" alt="Logo Atlética Octabit Brasão"></a>
+        
+
+        <nav class="header__nav">
+            <a class="header__link" href="#sobre">SOBRE</a>
+            <a class="header__link" href="#projetos">PROJETOS</a>
+            <a class="header__link" href="#socio">SÓCIO</a>
+            <a class="header__link" href="#comunidade">CONTATO</a>
+        </nav>
+
+        <button class="header__hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!--os spans são as linhas do icone do hamburguer, codados no javascript-->
+
+        <a class="header__btn-associe" href="#socio"><span>ASSOCIE-SE</span></a>
+    </div>
+
+</header>
 
     <main>
         <section class="hero">
-            </section>
+
+    <video class="hero__video" autoplay muted loop playsinline>
+        <source src="assets/videos/PolvoDesktop03.mp4" type="video/mp4">
+    </video>
+
+    <!--Video codado no JavaScript para dinamicidade-->
+    
+    <div class="hero__container">
+        
+
+        <p class="hero__subtitle">ASSOCIAÇÃO ATLÉTICA</p>
+        
+        <img class="hero__logo" src="assets/imagens/logos-octabit/1500px/8OCTABIT1500pxCroppadoBaixoCima.png" alt="Logo Octabit 12">
+
+
+
+        <!-- <h1 class="hero__title">OCTABIT</h1>
+        -->
+        <!--Titulo e Subtitulo caso tenhamos que usar depois-->
+        
+        <a class="btn-primary hero__btn" href="#sobre"><span>EXPLORAR</span></a>
+        
+    </div>
+        
+        </section>
 
         <section class="about" id="sobre">
-            </section>
+        
+        <div class="about__container">
+            <div class="about__text">
+                <p class="about__subtitle">SOBRE NÓS</p>
+                <h1 class="about__title">O QUE É A<span class="about__highlight">OCTABIT</span>?</h1>
+                <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eveniet officia, quas sunt, ab alias perferendis cumque unde reprehenderit a quasi odio! Reprehenderit debitis obcaecati exercitationem dicta, laboriosam libero esse!</p>
+                <p class="about__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi suscipit molestias consequatur consectetur, dolores ipsam saepe ratione ab labore, illum eos? Aperiam ut tenetur quaerat laborum neque reprehenderit adipisci deserunt?</p>
+                <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo optio voluptate error ab amet natus. Dolor temporibus officia commodi esse ut, ex officiis blanditiis? Quasi veritatis commodi blanditiis eos!</p>
+
+            </div>
+            <div class="about__media">
+                <video controls class="about__video" src="assets/videos/PolvoMobileTeste03.mp4"></video>
+            </div>
+        </div>
+
+
+        </section>
 
         <section class="projects" id="projetos">
             <div class="projects_header">

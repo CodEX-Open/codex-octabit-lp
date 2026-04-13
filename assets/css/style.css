@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: none;
+    scrollbar-width: none; /*esconde scrollbar */
+}
+
+*::-webkit-scrollbar{
+    display: none; /*esconde scrollbar safari chrome */
 }
 
 html {
@@ -28,18 +32,410 @@ p, span, a, label {
     font-size: 1.1rem;
 }
 
+
+/* =============HEADER=============*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
+
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--color-royal-blue-70);
+}
+
+.header__logo {
+    height: 50px;
+    margin-left: 15px;
+}
+
+.header__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.header__overlay.active {
+    visibility: visible ;
+    opacity: 1 ;
+}
+
+.header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;  /* barra do menu do hamburguer escondido fora da tela */
+    width: 50%;
+    height: 100vh;
+    background-color: var(--color-dark-blue-90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s ease;
+    z-index: 100;
+}
+
+.header__nav.active {
+    right: 0;/* aparece quando o menu hamburguer for clicado */
+}
+
+.header__link {
+    text-decoration: none;
+    color: var(--color-light-blue);
+    font-family: var(--font-impact);
+    letter-spacing: 2px;
+    transition: var(--transition-fast);
+    font-size: 1.5rem;
+}
+
+.header__link:hover {
+    color: var(--color-gold-light);
+}
+
+.header__btn-associe {
+    display: none;
+}
+
+.header--hidden{
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* HAMBURGER */
+
+.header__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 101;
+    padding: 10px; /* padding maior pra evitar erro de toque do nosso querido usuario */
+}
+
+.header__hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-light-blue);
+    transition: var(--transition-fast);
+}
+
+.header__hamburger.active span:nth-child(1){
+    transform:translateY(7px) rotate(45deg);
+}
+
+.header__hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.header__hamburger.active span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/*=== HAMBURGER FIM ==== */
+
+/* =============HEADER FIM=============*/
+
+/* =================HERO================*/
+
+/* VIDEO FUNDO */
+.hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* VIDEO FUNDO FIM */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.hero__logo{
+    max-height: 120px;
+    margin-bottom: 5px;
+}
+
+.hero__subtitle{
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    color: var(--color-gold-light);
+}
+
+.hero__title{
+    font-size: 3em;
+    color: var(--color-white);
+}
+
 .btn-primary {
     background-color: var(--color-gold-light);
     color: var(--color-dark-blue);
     font-family: var(--font-impact);
-    padding: 12px 24px;
+    padding: 12px 28px;
     border: none;
     cursor: pointer;
     transition: var(--transition-fast);
+    text-decoration: none;
+    transform: skew(20deg);
 }
+
+.btn-primary span {
+
+    font-family: var(--font-impact);
+    display: inline-block;
+    transform: skew(-20deg);
+    color: var(--color-dark-blue);
+}
+
 
 .btn-primary:hover {
     background-color: var(--color-sky-blue);
+}
+
+/* =================HERO FIM================*/
+
+/* =============SECTION SOBRE=============*/
+
+.about{
+    background-color: var(--color-royal-blue-70);
+    backdrop-filter: blur(4px);
+}
+
+.about__container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.about__text{
+    flex: 1;
+    text-align: center;
+    padding: 25px;
+}
+
+.about__title{
+    font-size: 3em;
+}
+
+.about__highlight{
+    font-size: 1em;
+    margin: 0px 5px;
+    -webkit-text-stroke: 3px var(--color-mid-blue);
+    color: transparent;
+}
+
+.about__subtitle{
+    font-family: var(--font-body);
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: var(--color-gold-light);
+    font-weight: lighter;
+}
+
+.about__description{
+    text-align: justify;
+    text-align-last: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.about__video{
+    height: 300px;
+    margin: 0px 0px 30px 0px;
+    min-height: 500px;
+}
+
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+/* =============HEADER=============*/
+
+    .header {
+        position: fixed;
+        background-color: var(--color-royal-blue-70);
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
+        will-change: transform, opacity;
+    }
+
+    .header__nav {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);  
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        pointer-events: none;
+    }
+
+    .header__link{
+        pointer-events: auto;
+    }
+
+    .header__btn-associe {
+        display: block;
+        margin-left: auto; 
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-right: 5px;
+        z-index: 101;
+        background-color: var(--color-gold-light);
+        transition: var(--transition-fast);
+    }
+
+    .header__btn-associe span {
+
+        color: var(--color-dark-blue);
+        font-family: var(--font-impact);
+    }
+
+    .header__btn-associe:hover {
+        background-color: var(--color-sky-blue);
+    }
+
+
+    .header__hamburger{
+        display: none; /* esconde o hamburguer no desktop */
+    }
+
+    .header__container {
+        position: relative;
+        justify-content: flex-start;
+        height: 85px;
+    }
+
+/* =============HEADER FIM=============*/
+
+/* =================HERO================*/
+
+    .hero__video{
+        opacity: 0.15;
+    }
+
+    .hero__logo{
+        max-height: 145px;
+        margin-bottom: 5px;
+}
+
+    .hero__subtitle{
+        font-size: 2em;
+        color: var(--color-gold-light);
+    }
+
+    .hero__title{
+        font-size: 4em;
+        color: var(--color-white);
+    }
+
+    .btn-primary {
+        font-size: 1.2em;
+    }
+
+
+/* =================HERO FIM================*/
+
+/* =============SECTION SOBRE=============*/
+
+.about__container{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 15px 40px;
+    align-items: start;
+}
+
+
+.about__text{
+    grid-column: 1;
+    align-items: center;
+}
+
+.about__title{
+    font-size: 4.5em;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.about__subtitle{
+    font-size: 2.5em;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.about__description{
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0px;
+}
+
+.about__media{
+    display: flex;
+    justify-content: center;
+}
+
+.about__video{
+    max-width: 100%;
+    max-height: 750px;
+    height: auto;
+    display: block;
+    align-self: flex-end;
+    margin: 30px 0px;
+}
+
 }
 
 /* ==== PROJETOS === */
@@ -291,7 +687,7 @@ p, span, a, label {
 }
 
 .projects_media:hover::before {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 
