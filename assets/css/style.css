@@ -41,9 +41,10 @@ p, span, a, label {
     left: 0;
     width: 100%;
     z-index: 100;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
-
+    border-bottom: 1px solid rgba(233, 213, 157, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .header__container {
@@ -51,7 +52,7 @@ p, span, a, label {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: var(--color-royal-blue-70);
+    background-color: var(--color-royal-blue-80);
 }
 
 .header__logo {
@@ -104,10 +105,26 @@ p, span, a, label {
     letter-spacing: 2px;
     transition: var(--transition-fast);
     font-size: 1.5rem;
+    position: relative;
+}
+
+.header__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-gold-light);
+    transition: width 0.3s ease;
 }
 
 .header__link:hover {
     color: var(--color-gold-light);
+}
+
+.header__link:hover::after {
+    width: 100%;
 }
 
 .header__btn-associe {
@@ -187,6 +204,18 @@ body.no-scroll {
     justify-content: center;
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(to bottom, transparent, var(--color-dark-blue));
+    pointer-events: none;
+    z-index: 2;
+}
+
 .hero__container {
     display: flex;
     flex-direction: column;
@@ -217,25 +246,30 @@ body.no-scroll {
     background-color: var(--color-gold-light);
     color: var(--color-dark-blue);
     font-family: var(--font-impact);
-    padding: 12px 28px;
-    border: none;
+    padding: 13px 32px;
+    border: 2px solid var(--color-gold-light);
     cursor: pointer;
     transition: var(--transition-fast);
     text-decoration: none;
     transform: skew(20deg);
+    letter-spacing: 2px;
 }
 
 .btn-primary span {
-
     font-family: var(--font-impact);
     display: inline-block;
     transform: skew(-20deg);
     color: var(--color-dark-blue);
+    transition: var(--transition-fast);
 }
 
-
 .btn-primary:hover {
-    background-color: var(--color-sky-blue);
+    background-color: transparent;
+    border-color: var(--color-sky-blue);
+}
+
+.btn-primary:hover span {
+    color: var(--color-sky-blue);
 }
 
 /* =================HERO FIM================*/
@@ -243,8 +277,9 @@ body.no-scroll {
 /* =============SECTION SOBRE=============*/
 
 .about{
-    background-color: var(--color-royal-blue-70);
-    backdrop-filter: blur(4px);
+    background-color: var(--color-royal-blue-80);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(233, 213, 157, 0.1);
 }
 
 .about__container{
@@ -252,6 +287,7 @@ body.no-scroll {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -283,7 +319,8 @@ body.no-scroll {
 .about__description{
     text-align: justify;
     text-align-last: center;
-    font-size: 1.5em;
+    font-size: 1.1rem;
+    line-height: 1.7;
     margin-bottom: 1em;
 }
 
@@ -301,7 +338,7 @@ body.no-scroll {
 
     .header {
         position: fixed;
-        background-color: var(--color-royal-blue-70);
+        background-color: var(--color-royal-blue-80);
         transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-in-out;
         will-change: transform, opacity;
     }
@@ -326,24 +363,31 @@ body.no-scroll {
 
     .header__btn-associe {
         display: block;
-        margin-left: auto; 
+        margin-left: auto;
         text-decoration: none;
         font-size: 1rem;
-        padding: 10px 20px;
-        margin-right: 5px;
+        padding: 9px 22px;
+        margin-right: 10px;
         z-index: 101;
         background-color: var(--color-gold-light);
+        border: 2px solid var(--color-gold-light);
+        border-radius: 4px;
         transition: var(--transition-fast);
+        letter-spacing: 1px;
     }
 
     .header__btn-associe span {
-
         color: var(--color-dark-blue);
         font-family: var(--font-impact);
     }
 
     .header__btn-associe:hover {
-        background-color: var(--color-sky-blue);
+        background-color: transparent;
+        border-color: var(--color-sky-blue);
+    }
+
+    .header__btn-associe:hover span {
+        color: var(--color-sky-blue);
     }
 
 
@@ -400,26 +444,34 @@ body.no-scroll {
 
 .about__text{
     grid-column: 1;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px 40px 30px 60px;
 }
 
 .about__title{
-    font-size: 4.5em;
+    font-size: 4em;
     align-self: flex-start;
     text-align: left;
+    line-height: 1;
+    margin-bottom: 12px;
 }
 
 .about__subtitle{
-    font-size: 2.5em;
+    font-size: 1rem;
     align-self: flex-start;
     text-align: left;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
 }
 
 .about__description{
-    font-size: 2em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px 0px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+    text-align-last: left;
+    max-width: 600px;
+    padding: 5px 0;
 }
 
 .about__media{
@@ -532,9 +584,10 @@ body.no-scroll {
 }
 
 .projects_tab-button.active {
-    background: color-mix(in srgb, var(--color-royal-blue) 70%, transparent);
+    background: color-mix(in srgb, var(--color-royal-blue) 85%, transparent);
     color: var(--color-gold-light);
-    border-color: color-mix(in srgb, var(--color-gold-light) 30%, transparent);
+    border-color: color-mix(in srgb, var(--color-gold-light) 50%, transparent);
+    box-shadow: inset 0 0 12px rgba(233, 213, 157, 0.05);
 }
 
 .projects_tab-button.active::before {
@@ -901,11 +954,14 @@ body.no-scroll {
 }
 
 
+/* ==== MEMBERSHIP ==== */
+
 /* ==== FOOTER === */
 .footer {
     position: relative;
     background-color: var(--color-dark-blue);
     overflow: hidden;
+    border-top: 1px solid rgba(233, 213, 157, 0.1);
 }
 
 /* Grid background */
@@ -1142,5 +1198,10 @@ body.no-scroll {
         grid-template-columns: 1fr;
         gap: 16px;
         justify-items: center;
+    }
+
+    .footer__col {
+        width: 100%;
+        max-width: 280px;
     }
 }
