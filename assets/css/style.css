@@ -13,6 +13,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: var(--color-gold-light);
+    color: var(--color-dark-blue);
+}
+
 body {
     background-color: var(--color-dark-blue);
     color: var(--color-white);
@@ -23,7 +28,7 @@ body {
 h1, h2, h3, .title {
     font-family: var(--font-impact);
     color: var(--color-gold-light);
-    letter-spacing: 2px;
+    letter-spacing: 0.04em;
 }
 
 p, span, a, label {
@@ -272,6 +277,10 @@ body.no-scroll {
     color: var(--color-sky-blue);
 }
 
+.btn-primary:active {
+    transform: skew(20deg) scale(0.96);
+}
+
 /* =================HERO FIM================*/
 
 /* =============SECTION SOBRE=============*/
@@ -287,13 +296,12 @@ body.no-scroll {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    margin-bottom: 50px;
+    padding: 60px 25px 50px;
 }
 
 .about__text{
     flex: 1;
-    text-align: center;
+    text-align: left;
     padding: 25px;
 }
 
@@ -317,17 +325,16 @@ body.no-scroll {
 }
 
 .about__description{
-    text-align: justify;
-    text-align-last: center;
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.75;
     margin-bottom: 1em;
+    color: color-mix(in srgb, var(--color-light-blue) 80%, transparent);
 }
 
 .about__video{
-    height: 300px;
+    width: 100%;
+    max-height: 480px;
     margin: 0px 0px 30px 0px;
-    min-height: 500px;
 }
 
 
@@ -371,9 +378,9 @@ body.no-scroll {
         z-index: 101;
         background-color: var(--color-gold-light);
         border: 2px solid var(--color-gold-light);
-        border-radius: 4px;
+        clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
         transition: var(--transition-fast);
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
     }
 
     .header__btn-associe span {
@@ -467,11 +474,11 @@ body.no-scroll {
 
 .about__description{
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.85;
     text-align: left;
-    text-align-last: left;
     max-width: 600px;
     padding: 5px 0;
+    color: color-mix(in srgb, var(--color-light-blue) 80%, transparent);
 }
 
 .about__media{
@@ -698,7 +705,8 @@ body.no-scroll {
     width: fit-content;
 }
 
-.projects_info-btn:hover{ background: var(--color-sand); transform: translateY(-1px); }
+.projects_info-btn:hover{ background: var(--color-sand); transform: translateY(-2px); }
+.projects_info-btn:active{ transform: translateY(0); }
 
 
 /* === Conteudo Lado Direito - Video / Logo === */
@@ -1012,16 +1020,24 @@ body.no-scroll {
     display: flex;
     align-items: flex-start;
     gap: 20px;
+    padding-left: 12px;
+    border-left: 1px solid color-mix(in srgb, var(--color-gold-light) 15%, transparent);
+    transition: border-color 0.3s ease;
+}
+
+.membership__step:hover {
+    border-left-color: color-mix(in srgb, var(--color-gold-light) 40%, transparent);
 }
 
 .membership__step-num {
     font-family: var(--font-impact);
     font-size: 2.8rem;
     color: var(--color-gold-light);
-    opacity: 0.25;
+    opacity: 0.42;
     line-height: 1;
     flex-shrink: 0;
     min-width: 52px;
+    font-variant-numeric: tabular-nums;
 }
 
 .membership__step strong {
@@ -1029,15 +1045,16 @@ body.no-scroll {
     font-family: var(--font-body);
     font-weight: 700;
     color: var(--color-light-blue);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
+    font-size: 1.05rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .membership__step p {
     font-size: 0.88rem;
     color: color-mix(in srgb, var(--color-light-blue) 50%, transparent);
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
 }
 
@@ -1205,6 +1222,7 @@ body.no-scroll {
 .community__card:hover {
     background: color-mix(in srgb, var(--color-royal-blue) 65%, transparent);
     border-color: color-mix(in srgb, var(--color-gold-light) 35%, transparent);
+    transform: translateX(3px);
 }
 
 .community__card svg {
