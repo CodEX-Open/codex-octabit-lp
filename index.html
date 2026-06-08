@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlética Octabit - UNIFEV</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="header__overlay" id="overlay"></div>
+
+    <header class="header" id="home">
+    <div class="header__container">
+        <a href="#sobre" class="header__logo-link"><img class="header__logo" src="assets/imagens/logos-octabit/500px/10OCTABIT500px.png" alt="Logo Atlética Octabit Brasão"></a>
+
+
+        <nav class="header__nav">
+            <a class="header__link" href="#sobre">SOBRE</a>
+            <a class="header__link" href="#projetos">PROJETOS</a>
+            <a class="header__link" href="#socio">SÓCIO</a>
+            <a class="header__link" href="#comunidade">COMUNIDADE</a>
+        </nav>
+
+        <button class="header__hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!--os spans são as linhas do icone do hamburguer, codados no javascript-->
+
+        <a class="header__btn-associe" href="#socio"><span>ASSOCIE-SE</span></a>
+    </div>
+
+</header>
+
+    <main>
+        <section class="hero">
+
+    <video class="hero__video" autoplay muted loop playsinline>
+        <source src="assets/videos/PolvoDesktop03.mp4" type="video/mp4">
+    </video>
+
+    <!--Video codado no JavaScript para dinamicidade-->
+
+    <div class="hero__container">
+
+
+        <p class="hero__subtitle">ASSOCIAÇÃO ATLÉTICA</p>
+
+        <img class="hero__logo" src="assets/imagens/logos-octabit/1500px/8OCTABIT1500pxCroppadoBaixoCima.png" alt="Logo Octabit 12">
+
+
+
+        <!-- <h1 class="hero__title">OCTABIT</h1>
+        -->
+        <!--Titulo e Subtitulo caso tenhamos que usar depois-->
+
+        <a class="btn-primary hero__btn" href="#sobre"><span>EXPLORAR</span></a>
+
+    </div>
+
+        </section>
+
+        <section class="about" id="sobre">
+
+        <div class="about__container">
+            <div class="about__text">
+                <p class="about__subtitle">SOBRE NÓS</p>
+                <h1 class="about__title">O QUE É A<span class="about__highlight">OCTABIT</span>?</h1>
+                <p class="about__description">A Octabit é a Associação Atlética Acadêmica de Engenharia de Computação da UNIFEV. Fundada com o propósito de unir tecnologia e comunidade, somos movidos pela inovação, pelas conexões e pela busca constante pelo conhecimento.</p>
+                <p class="about__description">Nossa missão é representar os estudantes e fortalecer a identidade dos nossos Abissais, sendo o suporte que o aluno precisa durante toda a sua jornada acadêmica — dentro e fora de sala.</p>
+                <p class="about__description">Seja nos eventos, na nossa loja oficial, no programa de sócios ou no dia a dia do curso, a Octabit está aqui para fazer da sua experiência na UNIFEV algo que você vai lembrar para sempre. Bem-vindo ao mundo Octabit!</p>
+
+            </div>
+            <div class="about__media">
+                <video controls class="about__video" src="assets/videos/PolvoMobileTeste03.mp4"></video>
+            </div>
+        </div>
+
+
+        </section>
+
+        <section class="projects" id="projetos">
+            <div class="projects_header">
+                <div>
+                    <h3>O que fazemos</h3>
+                    <h2>NOSSOS <span>PROJETOS</span></h2>
+                </div>
+
+            </div>
+
+            <div class="projects_tab">
+                <div class="projects_tab-button active" data-index="trote">Trote Solidário</div>
+                <div class="projects_tab-button" data-index="octacast">OctaCast</div>
+                <div class="projects_tab-button" data-index="codex">Codex</div>
+                <div class="projects_tab-button" data-index=".zip">.ZIP</div>
+            </div>
+
+            <div class="projects_content">
+                <!-- TROTE SOLIDÁRIO -->
+                <div class="projects_card active" data-index="trote">
+                    <div class="projects_info">
+                        <div><div class="projects_info-tag social">◆ AÇÃO SOCIAL</div></div>
+                        <h2>TROTE SOLIDÁRIO</h2>
+                        <p>Unimos forças com outras atléticas para arrecadar alimentos e entregar à Associação Beneficente Iracema Lasso Veronezi, instituição que há 33 anos apoia famílias da Vila Carvalho com cestas básicas. Uma ação que vai além do trote — mostra o verdadeiro propósito da nossa jornada acadêmica.</p>
+                            <div class="projects_desc">
+                                <p>Arrecadação de alimentos</p>
+                                <p>União das atléticas da Unifev</p>
+                                <p>Entrega à Assoc. Iracema Lasso Veronezi</p>
+                            </div>
+                        <a href="https://www.instagram.com/reel/DVZDwQNES0l/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="projects_info-btn">Ver Projeto →</a>
+                    </div>
+
+                    <div class="projects_media" onclick="toggleVideo(this)">
+                        <div class="projects_media-blur">
+                            <video src="assets/video/trotesolidario.mp4" muted loop playsinline></video>
+                        </div>
+
+                        <div class="projects_play"></div>
+                            <video class="vertical" src="assets/video/trotesolidario.mp4" ></video>
+                        <div class="projects_media-counter"><span>01</span> / 04</div>
+                    </div>
+                </div>
+
+                <!-- OCTACAST -->
+                <div class="projects_card" data-index="octacast">
+                    <div class="projects_info">
+                        <div><div class="projects_info-tag equipe">◆ PODCAST</div></div>
+                        <h2>OCTACAST</h2>
+                        <p>O podcast da OCTABIT sobre marketing e tecnologia. Episódios com temas relevantes para os estudantes de computação, trazendo conteúdo prático e discussões sobre o mercado.</p>
+                            <div class="projects_desc">
+                                <p>Marketing & Tecnologia</p>
+                                <p>Conteúdo para estudantes de computação</p>
+                                <p>Episódios com temas do mercado</p>
+                            </div>
+
+                        <a href="" class="projects_info-btn">Em Breve </a>
+
+                    </div>
+
+                    <div class="projects_media">
+                        <img class="fill" src="assets/logos/octacast.jpg" alt="CODEX" style=" object-fit:fill; min-width: 90%; min-height: 90%;">
+                        <div class="projects_media-counter"><span>02</span> / 04</div>
+                    </div>
+                </div>
+
+                <!-- CODEX -->
+                <div class="projects_card" data-index="codex">
+                    <div class="projects_info">
+                        <div><div class="projects_info-tag equipe">◆ EQUIPE TECH</div></div>
+                        <h2>CODEX</h2>
+                        <p>Focada em preparar os estudantes de computação para os desafios do mercado de trabalho. A Codex desenvolve projetos práticos, aprimorando habilidades técnicas de programação e a vivência do trabalho em equipe.</p>
+                            <div class="projects_desc">
+                                <p>Foco em trabalho em equipe</p>
+                                <p>Preparação para o mercado</p>
+                                <p>Projetos de software reais</p>
+                            </div>
+
+                        <a href="https://github.com/CodEX-Open" target="_blank" class="projects_info-btn">Ver Projeto →</a>
+
+                    </div>
+
+                    <div class="projects_media">
+                        <div class="projects_media-grid"></div>
+                        <div class="projects_media-txt">CODEX</div>
+
+                        <img class="logo" src="assets/logos/codex.png" alt="CODEX">
+                        <div class="projects_media-grad"></div>
+                        <div class="projects_media-counter"><span>03</span> / 04</div>
+                    </div>
+                </div>
+
+                <!-- .ZIP -->
+                <div class="projects_card" data-index=".zip">
+                    <div class="projects_info">
+                        <div><div class="projects_info-tag equipe">◆ EQUIPE TECH</div></div>
+                        <h2>.ZIP</h2>
+                        <p>Um ambiente colaborativo onde os alunos colocam a mão na massa. A .ZIP simula a rotina de uma empresa de desenvolvimento, focando em inovação tecnológica e na construção de um portfólio sólido para a carreira.</p>
+                        <div class="projects_desc">
+                                <p>Equipe de desenvolvimento de soluções</p>
+                                <p>Projetos reais em equipe</p>
+                                <p>Foco em inovação tecnológica</p>
+                            </div>
+
+                        <a href="https://github.com/Equipe-zip" target="_blank" class="projects_info-btn">Ver Projeto →</a>
+                    </div>
+
+                    <div class="projects_media">
+                        <div class="projects_media-grid"></div>
+                        <div class="projects_media-txt">.ZIP</div>
+                        <img class="logo" src="assets/logos/zip.png" alt=".ZIP">
+                        <div class="projects_media-grad"></div>
+                        <div class="projects_media-counter"><span>04</span> / 04</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO SÓCIO ===== -->
+        <section class="membership" id="socio">
+            <div class="membership__container">
+
+                <div class="membership__text">
+                    <p class="membership__subtitle">SÓCIO ABISSAL</p>
+                    <h1 class="membership__title">COMO SE TORNAR <span class="membership__highlight">SÓCIO</span>?</h1>
+                    <p class="membership__description">Sendo um Sócio Abissal, você apoia a Octabit e garante descontos exclusivos em produtos da atlética e em toda a nossa rede de parceiros. É a forma mais direta de fazer parte do mundo Octabit.</p>
+
+                    <div class="membership__steps">
+                        <div class="membership__step">
+                            <span class="membership__step-num">01</span>
+                            <div>
+                                <strong>Acesse a Cheers</strong>
+                                <p>Entre na nossa página oficial na plataforma Cheers.</p>
+                            </div>
+                        </div>
+                        <div class="membership__step">
+                            <span class="membership__step-num">02</span>
+                            <div>
+                                <strong>Escolha seu plano</strong>
+                                <p>Selecione o plano de sócio que melhor se encaixa em você.</p>
+                            </div>
+                        </div>
+                        <div class="membership__step">
+                            <span class="membership__step-num">03</span>
+                            <div>
+                                <strong>Aproveite os benefícios</strong>
+                                <p>Receba sua carteirinha e comece a aproveitar as vantagens exclusivas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="btn-primary membership__btn" href="https://cheers.com.br/pagina/atletica-octabit~7579" target="_blank"><span>ASSOCIAR-SE</span></a>
+                </div>
+
+                <div class="membership__media">
+                    <div class="membership__media-grid"></div>
+                    <img src="assets/img/carteirinha_octabit.jpeg" alt="Carteirinha Sócio Abissal">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO COMUNIDADE ===== -->
+        <section class="community" id="comunidade">
+            <div class="community__container">
+
+                <div class="community__text">
+                    <p class="community__subtitle">FAÇA PARTE</p>
+                    <h1 class="community__title">NOSSA <span class="community__highlight">COMUNIDADE</span></h1>
+                    <p class="community__description">Nos acompanhe nas redes sociais, entre no servidor do Discord e visite nosso GitHub. Lá na aba de Discussões tem um espaço especial de apresentações — conta quem você é para a comunidade Octabit!</p>
+
+                    <div class="community__cards">
+                        <a href="https://www.instagram.com/atletica.octabit?igsh=MWlxc3piMmp1bHptMQ==" target="_blank" class="community__card">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                            </svg>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@atletica.octabit</span>
+                            </div>
+                        </a>
+                        <a href="https://discord.gg/d5FXX6ZDFT" target="_blank" class="community__card">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.042.03.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                            <div>
+                                <strong>Discord</strong>
+                                <span>Servidor Octabit</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/AtleticaOctabit" target="_blank" class="community__card">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>Apresente-se na aba de Discussões!</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="community__media">
+                    <div class="community__media-grid"></div>
+                    <img src="assets/img/comunidade.jpeg" alt="Octabit Comunidade">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__grid-bg"></div>
+        <div class="footer__content">
+            <!-- Logo -->
+            <div class="footer__brand">
+                <h2 class="footer__logo">OCTABIT</h2>
+                <span class="footer__tagline">- A.A.A.E.U.C -</span>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="footer__col">
+                <h3 class="footer__col-title">Redes Sociais</h3>
+                <ul class="footer__links">
+                    <li>
+                        <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="5"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <div>
+                            <span class="footer__label">Instagram</span>
+                            <a href="https://www.instagram.com/atletica.octabit?igsh=MWlxc3piMmp1bHptMQ==" target="_blank">@atletica.octabit</a>
+                        </div>
+                    </li>
+                    <li>
+                        <svg class="footer__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.042.03.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                        <div>
+                            <span class="footer__label">Discord</span>
+                            <a href="https://discord.gg/d5FXX6ZDFT" target="_blank">Servidor Octabit</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="footer__col">
+                <h3 class="footer__col-title">Contato</h3>
+                <ul class="footer__links">
+                    <li>
+                        <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 4L12 13 2 4"/>
+                        </svg>
+                        <div>
+                            <span class="footer__label">Email</span>
+                            <a href="mailto:octabit.atletica@gmail.com">octabit.atletica@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <svg class="footer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <div>
+                            <span class="footer__label">Localização</span>
+                            <span>UNIFEV — Votuporanga, SP</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 - Todos os direito reservados.</p>
+            <div class="footer__dev">
+                <span>Desenvolvido por</span>
+                <div class="footer__codex-badge">
+                    <span class="footer__codex-dot">&#10041;</span>
+                    <span class="footer__codex-text">CODEX ACADEMY</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
