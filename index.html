@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlética Octabit - UNIFEV</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -75,8 +76,13 @@
                 <p class="about__description">Seja nos eventos, na nossa loja oficial, no programa de sócios ou no dia a dia do curso, a Octabit está aqui para fazer da sua experiência na UNIFEV algo que você vai lembrar para sempre. Bem-vindo ao mundo Octabit!</p>
 
             </div>
-            <div class="about__media">
-                <video controls class="about__video" src="assets/videos/PolvoMobileTeste03.mp4"></video>
+            <div class="about__media" onclick="toggleVideo(this)">
+                <div class="projects_media-blur">
+                    <video src="assets/videos/video-sobre.mp4" muted loop playsinline></video>
+                </div>
+                <div class="about__media-grid"></div>
+                <div class="projects_play"></div>
+                <video class="vertical" src="assets/videos/video-sobre.mp4"></video>
             </div>
         </div>
 
@@ -142,7 +148,7 @@
                     </div>
 
                     <div class="projects_media">
-                        <img class="fill" src="assets/logos/octacast.jpg" alt="CODEX" style=" object-fit:fill; min-width: 90%; min-height: 90%;">
+                        <img class="logo" src="assets/logos/octacast-logo.png" alt="OctaCast">
                         <div class="projects_media-counter"><span>02</span> / 04</div>
                     </div>
                 </div>

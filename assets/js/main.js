@@ -91,20 +91,24 @@ function toggleVideo(container) {
     if (!video) return;
 
     if (video.paused) {
+        if (blurVideo) blurVideo.currentTime = video.currentTime;
         video.play();
         if (blurVideo) blurVideo.play();
         container.classList.add('playing');
     } else {
         video.pause();
         video.controls = false;
-        if (blurVideo) blurVideo.pause();
+        if (blurVideo) {
+            blurVideo.pause();
+            blurVideo.currentTime = video.currentTime;
+        }
         container.classList.remove('playing');
     }
 }
 
 // === Lógica principal dos vídeos ===
-document.querySelectorAll('.projects_media video.vertical').forEach(video => {
-    const container = video.closest('.projects_media');
+document.querySelectorAll('.projects_media video.vertical, .about__media video.vertical').forEach(video => {
+    const container = video.closest('.projects_media, .about__media');
     const blurVideo = container ? container.querySelector('.projects_media-blur video') : null;
 
     video.addEventListener('playing', () => {
@@ -121,7 +125,10 @@ document.querySelectorAll('.projects_media video.vertical').forEach(video => {
         if (video.seeking) return;
         video.controls = false;
         container.classList.remove('playing');
-        if (blurVideo) blurVideo.pause();
+        if (blurVideo) {
+            blurVideo.pause();
+            blurVideo.currentTime = video.currentTime;
+        }
     });
 
     video.addEventListener('ended', () => {
